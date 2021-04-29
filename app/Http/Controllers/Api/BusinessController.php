@@ -21,7 +21,7 @@ class BusinessController extends Controller
         $data = $request->all();
 
         $validator = Validator::make($data, [
-            'name' => 'required|max:255',
+            'name' => 'required|max:255|unique:businesses',
             'location' => 'required|max:255',
             'region' => 'required|max:255',
             'number' => 'required',
