@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Business extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'name', 'location', 'region', 'number', 'website', 'logo'
+    ];
 }
